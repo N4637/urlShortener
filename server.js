@@ -13,7 +13,7 @@ app.use(express.static(path.join(__dirname, 'views')));
 app.use('/',analyticsRouter);
 app.use('/',urlRouter);
 
-const port=5000;
+const port = process.env.PORT || 5000;
 
 app.listen(port,()=>{
     console.log(`application listening on port ${port}`);
